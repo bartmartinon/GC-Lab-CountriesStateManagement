@@ -12,15 +12,17 @@ namespace CountriesStateManagement.Models
         public string HelloWorld { get; set; }
         public string Description { get; set; }
         public List<string> Colors { get; set; }
+        public string PicLink { get; set; }
 
         // Constructors
-        public Country(string Name, List<string> Languages, string HelloWorld, string Description, List<string> Colors)
+        public Country(string Name, List<string> Languages, string HelloWorld, string Description, List<string> Colors, string PicLink)
         {
             this.Name = Name;
             this.Languages = Languages;
             this.HelloWorld = HelloWorld;
             this.Description = Description;
             this.Colors = Colors;
+            this.PicLink = PicLink;
         }
     }
 }
