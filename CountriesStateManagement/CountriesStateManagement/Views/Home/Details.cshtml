@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Country Details";
+}
+
+<h2>Country Details</h2>
+@{
+    if (TempData.Peek("name") == null)
+    {
+        <p>Error: No country was selected! How did you even get this message!?</p>
+    }
+    else
+    {
+        <p><b>Name</b>: @ViewBag.name</p>
+        <p><b>Languages</b>: </p>
+        foreach (string l in @ViewBag.languages)
+        {
+            <p style="margin-left:2em">@l</p>
+        }
+        <p><b>Hello World</b>: @ViewBag.helloworld</p>
+        <p><b>Colors</b>: </p>
+        foreach (string c in @ViewBag.colors)
+        {
+            <p style="margin-left:2em">@c</p>
+        }
+    }
+}
+
+<form method="post">
+    <input type="hidden" name="Description" value="@ViewBag.description" />
+    <input type="submit" value="Description" />
+</form>
