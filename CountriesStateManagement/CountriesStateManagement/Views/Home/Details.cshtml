@@ -10,6 +10,16 @@
     }
     else
     {
+        <style>
+            body { background-color: @ViewBag.colors[0] }
+            h2 { color: @ViewBag.colors[1] }
+        </style>
+        if (ViewBag.colors.Length == 3)
+        {
+            <style>
+                p { color: @ViewBag.colors[2] }
+            </style>
+        }
         <p><b>Name</b>: @ViewBag.name</p>
         <p><b>Languages</b>: </p>
         foreach (string l in @ViewBag.languages)
@@ -22,7 +32,7 @@
         {
             <p style="margin-left:2em">@c</p>
         }
-        <img src=@ViewBag.piclink alt=@ViewBag.name height="100" width="175" style="border: 1px solid"/>
+        <img src=@ViewBag.piclink alt=@ViewBag.name height="100" width="175" style="border: 1px solid" />
     }
 }
 

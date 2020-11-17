@@ -2,6 +2,20 @@
     ViewData["Title"] = "Country Description";
 }
 
+<style>
+            body { background-color: @ViewBag.colors[0] }
+            h2 { color: @ViewBag.colors[1] }
+</style>
+
+@{
+    if (ViewBag.colors.Length == 3)
+    {
+        <style>
+                p { color: @ViewBag.colors[2] }
+        </style>
+    }
+}
+
 <h2>Country Description</h2>
 
 <p>@ViewBag.description</p>
